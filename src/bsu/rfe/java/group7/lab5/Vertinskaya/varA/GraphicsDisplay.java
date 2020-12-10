@@ -374,9 +374,7 @@ public class GraphicsDisplay extends JPanel {
     private class TMouseMotionListener implements MouseMotionListener {
 
         @Override
-        public void mouseDragged(MouseEvent e) {
-
-        }
+        public void mouseDragged(MouseEvent e) { }
 
         @Override
         public void mouseMoved(MouseEvent e) {
