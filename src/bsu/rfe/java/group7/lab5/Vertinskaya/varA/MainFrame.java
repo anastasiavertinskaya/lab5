@@ -102,12 +102,6 @@ public class MainFrame extends JFrame {
             // Шаг 1 - Открыть поток чтения данных, связанный с входным файловым потоком
             DataInputStream in = new DataInputStream(new
                     FileInputStream(selectedFile));
-            /* Шаг 2 - Зная объѐм данных в потоке ввода можно вычислить,
-             * сколько памяти нужно зарезервировать в массиве:
-             * Всего байт в потоке - in.available() байт;
-             * Размер одного числа Double - Double.SIZE бит, или Double.SIZE/8 байт;
-             * Так как числа записываются парами, то число пар меньше в 2 раза
-             */
             Double[][] graphicsData = new
                     Double[in.available()/(Double.SIZE/8)/2][];
             // Шаг 3 - Цикл чтения данных (пока в потоке есть данные)
